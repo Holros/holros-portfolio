@@ -1,25 +1,30 @@
 import { createSlice } from "@reduxjs/toolkit";
-import portfolio from "../../static/img/portfolio.png"
+import portfolio from "../../static/img/portfolio.png";
 import eItrams from "../../static/img/e-itrams.png";
-import visiting from "../../static/img/vmft.png"
-import medinotation from "../../static/img/medinotation.png"
-import webShop from "../../static/img/webshop.png"
-import filesClone from "../../static/img/filesClone.png"
-import stopWatch from "../../static/img/stopwatch.png"
-import coin from "../../static/img/coin.png"
+import visiting from "../../static/img/vmft.png";
+import medinotation from "../../static/img/medinotation.png";
+import webShop from "../../static/img/webshop.png";
+import filesClone from "../../static/img/filesClone.png";
+import stopWatch from "../../static/img/stopwatch.png";
+import coin from "../../static/img/coin.png";
 
 const projectArrayOptions = {
   name: "projectArray",
   initialState: {
     value: [
-      {img: portfolio, tools:["React", "Redux", "HTML", "JS", "Tailwind CSS",], link: "", github: ""},
+      {
+        img: portfolio,
+        tools: ["React", "Redux", "HTML", "JS", "Tailwind CSS"],
+        link: "https://holros.netlify.app/",
+        github: "https://github.com/Holros/holros-portfolio",
+      },
       {
         img: eItrams,
         tools: ["React", "HTML", "CSS", "JS"],
         link: "https://e-itrams.netlify.app/",
         github: null,
       },
-      
+
       {
         img: visiting,
         tools: ["React", "HTML", "CSS", "JS"],
@@ -55,8 +60,7 @@ const projectArrayOptions = {
         tools: ["React", "HTML", "CSS", "JS"],
         link: "https://github.com/Holros/CoinUnited",
         github: "https://github.com/Holros/CoinUnited",
-      }
-
+      },
     ],
   },
 };

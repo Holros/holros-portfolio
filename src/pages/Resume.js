@@ -18,7 +18,7 @@ const Resume = () => {
         {" "}
         <a
           rel="noreferrer"
-          href="https://drive.google.com/file/d/1ZWAxXzQJSRDnfk1wK4tpYBDPKFz_rI-k/view?usp=drive_link"
+          href="https://drive.google.com/file/d/1ElsIY3JxdyeKIewhPT3ysbcxj3xcYZGr/view?usp=drive_link"
           target="_blank"
           className="px-6 py-3 bg-[var(--themeColor)] hover:text-gray-700 text-white rounded-lg font-bold text-lg"
         >
