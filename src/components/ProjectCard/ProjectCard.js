@@ -13,7 +13,7 @@ const ProjectCard = ({ project }) => {
         className="max-w-full h-auto w-full rounded-lg"
       />
       <div className="absolute flex flex-col gap-2 w-full p-2 z-10">
-        <div className="flex gap-2 flex-wrap">
+        <div className="flex gap-[6px] flex-wrap">
           {project.tools.map((tool) => (
             <span
               key={tool}
