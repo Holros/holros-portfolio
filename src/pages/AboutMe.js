@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setHeading } from "../redux/slice/headingSlice";
 import tobiImg from "../static/img/tobi.jpg";
 import shinaImg from "../static/img/shina.jpg";
+import afeezImg from "../static/img/afeezImg.jpg"
 
 const AboutMe = () => {
   const dispatch = useDispatch();
@@ -44,7 +45,7 @@ const AboutMe = () => {
           <div key={item.name} style={{ "--percentWidth": item.percent }}>
             <div className="flex justify-between gap-1 text-gray-100 text-sm">
               <p>{item.name}</p>
-              <p>{item.percent}</p>
+              {/* <p>{item.percent}</p> */}
             </div>
             <div className="w-full h-[7px] rounded-full bg-black overflow-hidden">
               <div className="bg-[var(--themeColor)] w-[var(--percentWidth)] h-full"></div>
@@ -70,7 +71,7 @@ const AboutMe = () => {
             name: "Tobiloba Owolabi",
             img: tobiImg,
           },
-          /* { text: "Loading", name: "Daramola Afeeez", img: null }, */
+          { text: "I've had the pleasure of working with Olamide, and his expertise is outstanding. He’s patient, quick to understand complex tasks, and always delivers high-quality work. Ajayi's skills made a significant difference in our project. I'd recommend him any day.", name: "Daramola Afeeez", img: afeezImg },
         ].map((testimonial, index) => (
           <div
             className="relative w-full bg-gray-700 p-3 pt-12 rounded-lg flex items-center flex-col justify-between gap-8"
