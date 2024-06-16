@@ -17,7 +17,7 @@ const ProjectCard = ({ project }) => {
           {project.tools.map((tool) => (
             <span
               key={tool}
-              className="text-[var(--themeColor)] text-sm p-1 rounded-lg font-bold bg-gray-700"
+              className="text-[var(--themeColor)] text-[12px] p-1 rounded-lg font-bold bg-gray-700"
             >
               {tool}
             </span>
