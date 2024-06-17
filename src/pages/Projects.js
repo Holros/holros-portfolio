@@ -17,7 +17,7 @@ const Projects = () => {
         Take a look at some of the <span className="font-bold">projects</span> I
         have worked on
       </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-5">
         {projectArray?.map((project, index) => (
           <ProjectCard key={`${project.link} ${index}`} project={project} />
         ))}

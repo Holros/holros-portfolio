@@ -4,7 +4,7 @@ const ProjectCard = ({ project }) => {
   const theme = useSelector((state) => state.theme.value);
   return (
     <div
-      className="w-full relative flex items-end hover:outline outline-gray-400 shadow-lg rounded-lg overflow-hidden"
+      className="w-full relative flex items-end hover:outline outline-gray-400 shadow rounded-lg overflow-hidden"
       style={{ "--themeColor": theme }}
     >
       <img
@@ -17,7 +17,7 @@ const ProjectCard = ({ project }) => {
           {project.tools.map((tool) => (
             <span
               key={tool}
-              className="text-[var(--themeColor)] text-[12px] p-1 rounded-lg font-bold bg-gray-700"
+              className="text-[var(--themeColor)] text-[11px] p-1 rounded-lg font-bold bg-gray-700"
             >
               {tool}
             </span>
