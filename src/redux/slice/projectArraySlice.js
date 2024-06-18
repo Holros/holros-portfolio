@@ -57,7 +57,7 @@ const projectArrayOptions = {
       },
       {
         img: coin,
-        tools: ["React", "HTML", "CSS", "JS"],
+        tools: ["HTML", "CSS", "JS"],
         link: "https://github.com/Holros/CoinUnited",
         github: "https://github.com/Holros/CoinUnited",
       },
