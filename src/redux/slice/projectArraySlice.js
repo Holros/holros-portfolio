@@ -8,6 +8,7 @@ import filesClone from "../../static/img/filesClone.png";
 import stopWatch from "../../static/img/stopwatch.png";
 import coin from "../../static/img/coin.png";
 import games from "../../static/img/games.png";
+import calculator from "../../static/img/calculator.png"
 
 const projectArrayOptions = {
   name: "projectArray",
@@ -50,13 +51,13 @@ const projectArrayOptions = {
         tools: ["React", "HTML", "CSS", "JS"],
         link: "https://holros-web-shop.netlify.app/",
         github: "https://github.com/Holros/web-shop",
-      } /* 
+      },
       {
         img: calculator,
         tools: ["React", "HTML", "JS", "Tailwind CSS"],
-        link: "https://holros-calculator.netlify.app/",
+        link: "https://holros-calculator.vercel.app/",
         github: "https://github.com/Holros/my_wisdom_inc_test",
-      }, */,
+      },
       {
         img: stopWatch,
         tools: ["HTML", "CSS", "JS"],
