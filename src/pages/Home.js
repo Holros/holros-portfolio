@@ -37,7 +37,7 @@ const Home = () => {
           <p className="font-normal text-[15px]">
             I'm a front-end developer who enjoys creating responsive and
             user-friendly web applications with HTML, CSS, JavaScript, React.js,
-            Redux, and Tailwind CSS. I focus on delivering great web experiences
+            Redux, Next.js, Typescript and Tailwind CSS. I focus on delivering great web experiences
             through effective API integration and performance optimization.{" "}
           </p>
           <div className="flex flex-wrap gap-3 items-start">

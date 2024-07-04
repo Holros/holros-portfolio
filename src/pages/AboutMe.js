@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setHeading } from "../redux/slice/headingSlice";
 import tobiImg from "../static/img/tobi.jpg";
 import shinaImg from "../static/img/shina.jpg";
-import afeezImg from "../static/img/afeezImg.jpg"
+import afeezImg from "../static/img/afeezImg.jpg";
 
 const AboutMe = () => {
   const dispatch = useDispatch();
@@ -22,7 +22,7 @@ const AboutMe = () => {
         A front-end developer with a background in Mechanical Engineering from
         Ekiti State University. I specialize in building responsive and
         user-friendly web applications using HTML, CSS, JavaScript, React.js,
-        Redux, and Tailwind CSS. I'm skilled at both enhancing existing projects
+        Redux, Next.js, Typescript and Tailwind CSS. I'm skilled at both enhancing existing projects
         and creating new ones from scratch. I focus on solving problems,
         optimizing performance, and ensuring cross-browser compatibility. I
         enjoy collaborating with teams to bring ideas to life and deliver
@@ -35,9 +35,11 @@ const AboutMe = () => {
           { name: "HTML", percent: "93%" },
           { name: "CSS", percent: "87%" },
           { name: "JavaScript", percent: "82%" },
-          { name: "React", percent: "85%" },
+          { name: "React", percent: "88%" },
           { name: "Redux", percent: "79%" },
           { name: "Tailwind CSS", percent: "86%" },
+          { name: "Next.js", percent: "85%" },
+          { name: "Typescript", percent: "83%" },
           { name: "API Integration", percent: "83%" },
           { name: "Git & GitHub", percent: "85%" },
           { name: "Responsive Design", percent: "90%" },
@@ -71,7 +73,11 @@ const AboutMe = () => {
             name: "Tobiloba Owolabi",
             img: tobiImg,
           },
-          { text: "I've had the pleasure of working with Olamide, and his expertise is outstanding. He’s patient, quick to understand complex tasks, and always delivers high-quality work. Ajayi's skills made a significant difference in our project. I'd recommend him any day.", name: "Daramola Afeeez", img: afeezImg },
+          {
+            text: "I've had the pleasure of working with Olamide, and his expertise is outstanding. He’s patient, quick to understand complex tasks, and always delivers high-quality work. Ajayi's skills made a significant difference in our project. I'd recommend him any day.",
+            name: "Daramola Afeeez",
+            img: afeezImg,
+          },
         ].map((testimonial, index) => (
           <div
             className="relative w-full bg-gray-700 p-3 pt-12 rounded-lg flex items-center flex-col justify-between gap-8"
