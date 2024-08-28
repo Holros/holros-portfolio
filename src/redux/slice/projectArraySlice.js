@@ -9,15 +9,30 @@ import stopWatch from "../../static/img/stopwatch.png";
 import coin from "../../static/img/coin.png";
 import games from "../../static/img/games.png";
 import calculator from "../../static/img/calculator.png"
+import liizorV2 from "../../static/img/liizor-v2.png"
+import liizorV1 from "../../static/img/liizor-v1.png"
 
 const projectArrayOptions = {
   name: "projectArray",
   initialState: {
     value: [
       {
+        img: liizorV2,
+        tools: ["Next", "HTML", "JS", "Tailwind CSS"],
+        link: "https://liizor-prelaunch-v2.vercel.app/",
+      },{
+        img: liizorV1,
+        tools: ["Next", "HTML", "JS", "Tailwind CSS"],
+        link: "https://liizor-prelaunch.vercel.app/",
+      },/* {
+        img: portfolio,
+        tools: ["Next", "TS", "HTML", "Tailwind CSS"],
+        link: "https://holros-dashboard-app.app/",
+        github: "https://github.com/Holros/Next.js-Dashboard-App",
+      } */,{
         img: portfolio,
         tools: ["React", "Redux", "HTML", "JS", "Tailwind CSS"],
-        link: "https://holros.netlify.app/",
+        link: "https://holros.vercel.app/",
         github: "https://github.com/Holros/holros-portfolio",
       },
       {
