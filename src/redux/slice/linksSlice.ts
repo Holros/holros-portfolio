@@ -31,6 +31,7 @@ const linksOptions = {
       },
     ],
   },
+  reducers: {}
 };
 
 const linksSlice = createSlice(linksOptions);

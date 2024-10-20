@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { setHeading } from "../redux/slice/headingSlice";
 import { useSelector } from "react-redux";
@@ -7,15 +7,16 @@ import linkedInIcon from "../static/icon/icons8-linkedin.svg";
 import whatsappIcon from "../static/icon/icons8-whatsapp.svg";
 import emailIcon from "../static/icon/icons8-email-100.png";
 import callIcon from "../static/icon/icons8-call-contact.png";
+import { RootState } from "../redux/store";
 
 const Contact = () => {
-  const theme = useSelector((state) => state.theme.value);
+  const theme = useSelector((state: RootState) => state.theme.value);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(setHeading("CONTACT"));
   }, [dispatch]);
   return (
-    <div style={{ "--themeColor": theme }}>
+    <div style={{ "--themeColor": theme } as React.CSSProperties}>
       <p className="font-[montserrat] text-xl mb-5">
         Feel free to <span className="font-bold">contact</span> me!
       </p>

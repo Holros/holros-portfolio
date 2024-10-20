@@ -10,11 +10,12 @@ import profilePicture from "../../static/img/1717961869505.jpg";
 // } from "../redux/slice/themeSlice";
 import { NavLink } from "react-router-dom";
 import { openModal } from "../../redux/slice/modalSlice";
+import { RootState } from "../../redux/store";
 
 const SidebarContent = () => {
   const dispatch = useDispatch();
-  const theme = useSelector((state) => state.theme.value);
-  const linksArray = useSelector((state) => state.links.value);
+  const theme = useSelector((state: RootState) => state.theme.value);
+  const linksArray = useSelector((state: RootState) => state.links.value);
 
   return (
     <>

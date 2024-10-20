@@ -1,11 +1,13 @@
 import { useSelector } from "react-redux";
+import { RootState } from "../../redux/store";
+import { Project } from "../../projectTypes";
 
-const ProjectCard = ({ project }) => {
-  const theme = useSelector((state) => state.theme.value);
+const ProjectCard = ({ project }:{project: Project}) => {
+  const theme = useSelector((state: RootState) => state.theme.value);
   return (
     <div
       className="w-full relative flex items-end hover:outline outline-gray-400 shadow rounded-lg overflow-hidden"
-      style={{ "--themeColor": theme }}
+      style={{ "--themeColor": theme } as React.CSSProperties}
     >
       <img
         src={project.img}

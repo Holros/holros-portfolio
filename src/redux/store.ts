@@ -14,4 +14,6 @@ const store = configureStore({
     heading: headingReducer
 }})
 
+export type RootState = ReturnType<typeof store.getState>
+
 export default store

@@ -2,15 +2,16 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { setHeading } from "../redux/slice/headingSlice";
 import { useSelector } from "react-redux";
+import { RootState } from "../redux/store";
 
 const Resume = () => {
-  const theme = useSelector((state) => state.theme.value);
+  const theme = useSelector((state: RootState) => state.theme.value);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(setHeading("RESUME"));
   }, [dispatch]);
   return (
-    <div style={{ "--themeColor": theme }}>
+    <div style={{ "--themeColor": theme } as React.CSSProperties}>
       <p className="font-[montserrat] text-xl mb-5">
         Click the link below to view <span className="font-bold">resume</span>
       </p>

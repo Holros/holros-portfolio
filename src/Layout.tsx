@@ -4,7 +4,7 @@ import burgerIcon from "./static/icon/icons8-menu-black.png";
 import cancelIcon from "./static/icon/icons8-cancel-black.png";
 import changeIcon from "./static/icon/icons8-change-100.png";
 import checkmarkIcon from "./static/icon/icons8-checkmark-90.png";
-import { useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Modal from "./components/Modal/Modal";
 import { openModal } from "./redux/slice/modalSlice";
@@ -17,11 +17,12 @@ import {
   setToTeal,
 } from "./redux/slice/themeSlice";
 import Heading from "./components/Heading/Heading";
+import { RootState } from "./redux/store";
 
 const Layout = () => {
-  const theme = useSelector((state) => state.theme.value);
-  const linksArray = useSelector((state) => state.links.value);
-  const heading = useSelector((state) => state.heading.value);
+  const theme = useSelector((state: RootState) => state.theme.value);
+  const linksArray = useSelector((state: RootState) => state.links.value);
+  const heading = useSelector((state: RootState) => state.heading.value);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const menuRef = useRef(null);
   const dispatch = useDispatch();
@@ -58,7 +59,7 @@ const Layout = () => {
                 <button
                   key={item.name}
                   onClick={() => dispatch(item.func())}
-                  style={{ "--themeColor": theme }}
+                  style={{ "--themeColor": theme } as React.CSSProperties}
                   className={`text-black group font-bold font-[montserrat] flex items-center gap-2 p-1 w-full hover:bg-[var(--themeColor)] hover:text-white rounded`}
                 >
                   <span

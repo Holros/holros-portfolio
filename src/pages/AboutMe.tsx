@@ -4,17 +4,18 @@ import { setHeading } from "../redux/slice/headingSlice";
 import tobiImg from "../static/img/tobi.jpg";
 import shinaImg from "../static/img/shina.jpg";
 import afeezImg from "../static/img/afeezImg.jpg";
+import { RootState } from "../redux/store";
 
 const AboutMe = () => {
   const dispatch = useDispatch();
-  const theme = useSelector((state) => state.theme.value);
+  const theme = useSelector((state: RootState) => state.theme.value);
 
   useEffect(() => {
     dispatch(setHeading("ABOUT ME"));
   }, [dispatch]);
 
   return (
-    <div style={{ "--themeColor": theme }}>
+    <div style={{ "--themeColor": theme } as React.CSSProperties}>
       <p className="font-[montserrat] text-2xl mb-5">
         I'm <span className="font-bold">Ajayi Olamide,</span> Frontend Developer
       </p>
@@ -44,7 +45,7 @@ const AboutMe = () => {
           { name: "Git & GitHub", percent: "85%" },
           { name: "Responsive Design", percent: "90%" },
         ].map((item) => (
-          <div key={item.name} style={{ "--percentWidth": item.percent }}>
+          <div key={item.name} style={{ "--percentWidth": item.percent } as React.CSSProperties}>
             <div className="flex justify-between gap-1 text-gray-100 text-sm">
               <p>{item.name}</p>
               {/* <p>{item.percent}</p> */}

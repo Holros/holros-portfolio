@@ -29,7 +29,7 @@ const projectArrayOptions = {
         tools: ["Next", "TS", "HTML", "Tailwind CSS"],
         link: "https://holros-dashboard-app.app/",
         github: "https://github.com/Holros/Next.js-Dashboard-App",
-      } */,{
+      }, */{
         img: portfolio,
         tools: ["React", "Redux", "HTML", "JS", "Tailwind CSS"],
         link: "https://holros.vercel.app/",
@@ -93,6 +93,7 @@ const projectArrayOptions = {
       },
     ],
   },
+  reducers: {}
 };
 
 const projectArraySlice = createSlice(projectArrayOptions);

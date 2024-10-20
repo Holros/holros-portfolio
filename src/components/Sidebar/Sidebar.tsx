@@ -1,18 +1,18 @@
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import SidebarContent from "./SidebarContent";
 import { useLocation } from "react-router-dom";
 
-const Sidebar = ({ isSidebarOpen, setIsSidebarOpen, menuRef }) => {
-  const mobileSideBarRef = useRef(null);
+const Sidebar = ({ isSidebarOpen, setIsSidebarOpen, menuRef }:{ isSidebarOpen: boolean, setIsSidebarOpen: React.Dispatch<React.SetStateAction<boolean>>, menuRef: React.RefObject<HTMLDivElement> }) => {
+  const mobileSideBarRef = useRef<HTMLDivElement | null>(null);
   const location = useLocation()
 
   useEffect(() => {
-    const checkIfClickIsOutside = (e) => {
+    const checkIfClickIsOutside = (e : MouseEvent) => {
       if (
         mobileSideBarRef &&
         menuRef &&
-        !mobileSideBarRef?.current?.contains(e.target) &&
-        !menuRef?.current?.contains(e.target)
+        !mobileSideBarRef?.current?.contains(e.target as Node) &&
+        !menuRef?.current?.contains(e.target as Node)
       ) {
         setIsSidebarOpen(false);
       }
@@ -24,7 +24,7 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen, menuRef }) => {
     };
   }, [menuRef, setIsSidebarOpen]);
 
-  return (
+   return (
     <>
       {/* Sidebar for smaller screen*/}
       <div
@@ -36,9 +36,11 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen, menuRef }) => {
         <SidebarContent />
       </div>
       {/* Sidebar for bigger screen */}
-      {location.pathname !== "/" && <div className="hidden md:flex h-[100vh] basis-[25%] w-[25%] flex-col fixed z-30 overflow-y-auto overflow-x-hidden">
-        <SidebarContent />
-      </div>}
+      {location.pathname !== "/" && (
+        <div className="hidden md:flex h-[100vh] basis-[25%] w-[25%] flex-col fixed z-30 overflow-y-auto overflow-x-hidden">
+          <SidebarContent />
+        </div>
+      )}
     </>
   );
 };

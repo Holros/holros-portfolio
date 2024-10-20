@@ -2,16 +2,17 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { openModal } from "../redux/slice/modalSlice";
 import profilePicture from "../static/img/1717961869505.jpg";
+import { RootState } from "../redux/store";
 
 const Home = () => {
-  const theme = useSelector((state) => state.theme.value);
+  const theme = useSelector((state: RootState) => state.theme.value);
   const dispatch = useDispatch();
   return (
     <>
       {/* <Heading name={"HOME"}/> */}
       <div
         className="flex flex-col font-bold font-[montserrat] h-[100vh]  md:flex-row-reverse md:overflow-hidden overflow-x-auto justify-start "
-        style={{ "--themeColor": theme }}
+        style={{ "--themeColor": theme } as React.CSSProperties}
       >
         <div className="basis-[45%] max-h-[50%] md:max-h-none bg-white">
           <img
