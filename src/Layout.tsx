@@ -32,57 +32,56 @@ const Layout = () => {
     <div className="flex bg-gray-200">
       <Modal
         heading={"Change Theme"}
-        content={
-          <>
-            <p
-              className={`text-lg font-bold pt-2 pb-4`}
-              style={{ color: theme }}
+      >  
+      <p
+        className={`text-lg font-bold pt-2 pb-4`}
+        style={{ color: theme }}
+      >
+        Choose the color that best suits your style
+      </p>
+      <div
+        className="flex flex-col items-start gap-4 p-1 rounded-xl"
+        style={{ border: `1px solid ${theme}` }}
+      >
+        {[
+          {
+            name: "Amber (default)",
+            color: "#FFC107",
+            func: setToDefault,
+          },
+          { name: "Blue", color: "#2196F3", func: setToBlue },
+          { name: "Green", color: "#4CAF50", func: setToGreen },
+          { name: "Indigo", color: "#7887d8", func: setToIndigo },
+          { name: "Orange", color: "#FF5722", func: setToOrange },
+          { name: "Teal", color: "#009688", func: setToTeal },
+        ].map((item) => (
+          <button
+            key={item.name}
+            onClick={() => dispatch(item.func())}
+            style={{ "--themeColor": theme } as React.CSSProperties}
+            className={`text-black group font-bold font-[montserrat] flex items-center gap-2 p-1 w-full hover:bg-[var(--themeColor)] hover:text-white rounded`}
+          >
+            <span
+              className="w-6 h-6 border border-white rounded-full"
+              style={{ backgroundColor: item.color }}
             >
-              Choose the color that best suits your style
-            </p>
-            <div
-              className="flex flex-col gap-4 items-start p-1 rounded-xl"
-              style={{ border: `1px solid ${theme}` }}
-            >
-              {[
-                {
-                  name: "Amber (default)",
-                  color: "#FFC107",
-                  func: setToDefault,
-                },
-                { name: "Blue", color: "#2196F3", func: setToBlue },
-                { name: "Green", color: "#4CAF50", func: setToGreen },
-                { name: "Indigo", color: "#7887d8", func: setToIndigo },
-                { name: "Orange", color: "#FF5722", func: setToOrange },
-                { name: "Teal", color: "#009688", func: setToTeal },
-              ].map((item) => (
-                <button
-                  key={item.name}
-                  onClick={() => dispatch(item.func())}
-                  style={{ "--themeColor": theme } as React.CSSProperties}
-                  className={`text-black group font-bold font-[montserrat] flex items-center gap-2 p-1 w-full hover:bg-[var(--themeColor)] hover:text-white rounded`}
-                >
-                  <span
-                    className="w-6 h-6 rounded-full border border-white"
-                    style={{ backgroundColor: item.color }}
-                  >
-                    {" "}
-                  </span>
-                  {item.name}
-                  {theme === item.color && (
-                    <img
-                      src={checkmarkIcon}
-                      alt="checkmark"
-                      className="h-6 w-6 p-[1px] ml-2 rounded-full"
-                      style={{ backgroundColor: theme }}
-                    />
-                  )}
-                </button>
-              ))}
-            </div>
-          </>
-        }
-      />
+              {" "}
+            </span>
+            {item.name}
+            {theme === item.color && (
+              <img decoding="async" loading="lazy"
+              height={1}
+              width={1}
+                src={checkmarkIcon}
+                alt="checkmark"
+                className="h-6 w-6 p-[1px] ml-2 rounded-full"
+                style={{ backgroundColor: theme }}
+              />
+            )}
+          </button>
+        ))}
+      </div>
+    </Modal>
       <Sidebar
         isSidebarOpen={isSidebarOpen}
         setIsSidebarOpen={setIsSidebarOpen}
@@ -98,16 +97,18 @@ const Layout = () => {
         <div className="flex flex-col">
           {/* header */}
           {location.pathname !== "/" && (
-            <div className="flex gap-2 w-full md:hidden justify-between items-center pb-5">
+            <div className="flex items-center justify-between w-full gap-2 pb-5 md:hidden">
               <h1
                 className="p-3 text-white font-bold font-[montserrat] text-3xl rounded-lg"
                 style={{ backgroundColor: theme }}
               >
                 OLAMIDE
               </h1>
-              <img
+              <img decoding="async" loading="lazy"
                 src={isSidebarOpen ? cancelIcon : burgerIcon}
                 ref={menuRef}
+                height={1}
+                width={1}
                 onClick={() => setIsSidebarOpen((value) => !value)}
                 alt="burger nav"
                 className="w-[50px] max-w-full h-auto z-30"
@@ -132,7 +133,7 @@ const Layout = () => {
                 className={`relative p-1 rounded-full [&:not(:last-child)]:after:absolute [&:not(:last-child)]:after:w-[1px] [&:not(:last-child)]:after:h-[0.6rem] [&:not(:last-child)]:after:bg-black [&:not(:last-child)]:after:top-[100%] [&:not(:last-child)]:after:left-[50%] hover:border-y-2 hover:border-white `}
               >
                 {({ isActive }) => (
-                  <img
+                  <img decoding="async" loading="lazy"
                     src={isActive ? item.altImg : item.img}
                     alt="icons"
                     className="w-[25px] max-w-full h-auto"
@@ -144,8 +145,10 @@ const Layout = () => {
               className="relative p-1 rounded-full hover:border-y-2 hover:border-white [&:not(:last-child)]:after:absolute [&:not(:last-child)]:after:w-[1px] [&:not(:last-child)]:after:h-[0.6rem] [&:not(:last-child)]:after:bg-black [&:not(:last-child)]:after:top-[100%] [&:not(:last-child)]:after:left-[50%]"
               onClick={() => dispatch(openModal())}
             >
-              <img
+              <img decoding="async" loading="lazy"
                 src={changeIcon}
+                width={1}
+                height={1}
                 alt="icons"
                 className="w-[25px] max-w-full h-auto"
               />

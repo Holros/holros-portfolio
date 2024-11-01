@@ -51,18 +51,20 @@ const Contact = () => {
             className="flex gap-2 items-center hover:bg-[var(--themeColor)] py-2 hover:px-2 hover:text-white group rounded-lg font-bold text-sm"
             key={index}
           >
-            <div className="p-2 border border-red group-hover:bg-gray-300 rounded-full">
-              <img
+            <div className="p-2 border rounded-full border-red group-hover:bg-gray-300">
+              <img decoding="async" loading="lazy"
                 src={type.img}
                 alt={type.text}
-                className="max-w-full h-auto w-10"
+                height={1}
+                width={1}
+                className="w-10 h-auto max-w-full"
               />
             </div>{" "}
             <p>{type.text}</p>
           </a>
         ))}
       </div>
-      <div className="flex justify-center font-bold text-2xl mt-6">Thanks!</div>
+      <div className="flex justify-center mt-6 text-2xl font-bold">Thanks!</div>
     </div>
   );
 };

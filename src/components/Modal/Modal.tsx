@@ -4,7 +4,7 @@ import cancelIcon from "../../static/icon/icons8-cancel-black.png";
 import { RootState } from "../../redux/store";
 import React from "react";
 
-const Modal = ({ content, heading }: {content: React.ReactNode, heading: string}) => {
+const Modal = ({heading, children }: {heading: string, children:React.ReactNode}) => {
   const displayModal = useSelector((state:RootState) => state.modal.value);
   const dispatch = useDispatch();
 
@@ -21,14 +21,16 @@ const Modal = ({ content, heading }: {content: React.ReactNode, heading: string}
       >
         <div className={`flex gap-3 items-center ${heading? "justify-between" : "justify-end"}`}>
             {heading && <h1 className="text-2xl font-bold font-[montserrat]">{heading}</h1>}
-          <img
+          <img decoding="async" loading="lazy"
             src={cancelIcon}
+            height={1}
+            width={1}
             alt="cancel"
             className="w-5 h-auto"
             onClick={() => dispatch(closeModal())}
           />
         </div>
-        {content}
+        {children}
       </div>
     </div>
   );

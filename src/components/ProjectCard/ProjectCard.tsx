@@ -9,10 +9,12 @@ const ProjectCard = ({ project }:{project: Project}) => {
       className="w-full relative flex items-end hover:outline outline-gray-400 shadow rounded-lg overflow-hidden"
       style={{ "--themeColor": theme } as React.CSSProperties}
     >
-      <img
+      <img decoding="async" loading="lazy"
         src={project.img}
+        height={1}
+        width={2}
         alt="project"
-        className="max-w-full h-auto w-full rounded-lg"
+        className="max-w-full h-auto min-h-full w-full rounded-lg object-cover"
       />
       <div className="absolute flex flex-col gap-2 w-full p-2 z-10">
         <div className="flex gap-[6px] flex-wrap">

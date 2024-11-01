@@ -86,9 +86,11 @@ const AboutMe = () => {
           >
             <div className="absolute bg-white h-20 w-20 rounded-full top-0 left-[50%] -translate-y-1/2 -translate-x-1/2 flex justify-center items-center overflow-hidden">
               {testimonial.img && (
-                <img
+                <img decoding="async" loading="lazy"
                   src={testimonial.img}
                   alt="client"
+                  height={1}
+                  width={1}
                   className="w-full h-auto max-w-full object-cover"
                 />
               )}

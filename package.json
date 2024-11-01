@@ -10,6 +10,8 @@
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.1",
     "clsx": "^2.1.1",
+    "glob": "^11.0.0",
+    "imagemin-gifsicle": "^7.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^9.1.2",
@@ -22,7 +24,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "optimize-images": "node optimize-images.mjs"
   },
   "eslintConfig": {
     "extends": [
@@ -44,6 +47,11 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
+    "imagemin": "^9.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^10.0.0",
+    "imagemin-svgo": "^11.0.1",
+    "imagemin-webp": "^8.0.0",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.14",
     "typescript": "^4.9.5"

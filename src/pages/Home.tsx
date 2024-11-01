@@ -15,15 +15,17 @@ const Home = () => {
         style={{ "--themeColor": theme } as React.CSSProperties}
       >
         <div className="basis-[45%] max-h-[50%] md:max-h-none bg-white">
-          <img
+          <img decoding="async" loading="lazy"
             src={profilePicture}
             alt="profile"
-            className="w-auto min-w-full h-full object-cover"
+            height={3}
+            width={2}
+            className="object-cover w-auto h-full min-w-full"
           />
         </div>
         <div className="basis-[55%] flex justify-center p-5 flex-col gap-5 bg-white">
           <p className="text-3xl mb-[-8px]">HI THERE!</p>
-          <div className="flex flex-col gap-2 items-start">
+          <div className="flex flex-col items-start gap-2">
             <p className="text-6xl">
               {" "}
               I'M{" "}
@@ -41,7 +43,7 @@ const Home = () => {
             Redux, Next.js, Typescript and Tailwind CSS. I focus on delivering great web experiences
             through effective API integration and performance optimization.{" "}
           </p>
-          <div className="flex flex-wrap gap-3 items-start">
+          <div className="flex flex-wrap items-start gap-3">
             <Link
               to="about"
               className="bg-[var(--themeColor)] text-white hover:text-gray-700 px-4 py-4 rounded-full text-sm"

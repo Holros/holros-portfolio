@@ -20,9 +20,11 @@ const SidebarContent = () => {
   return (
     <>
       <div className="w-full basis-[28%] min-h-[75px] flex overflow-hidden justify-center items-center">
-        <img
+        <img decoding="async" loading="lazy"
           src={profilePicture}
           alt="profile"
+          height={3}
+          width={2}
           className=" max-w-full min-h-full min-w-full object-cover"
         />
       </div>
