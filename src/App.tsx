@@ -27,7 +27,6 @@ const SuspenseRoute = ({ element: Element }: { element: React.LazyExoticComponen
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -30 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="border border-red-500"
         >
           <Element />
         </motion.div>
