@@ -33,17 +33,17 @@ const AboutMe = () => {
       <p className="">Some of my skills and how proficient I am with them</p>
       <div className="px-3 py-4 bg-gray-700 mt-2 grid grid-cols-2 gap-4 rounded-lg">
         {[
-          { name: "HTML", percent: "93%" },
-          { name: "CSS", percent: "87%" },
-          { name: "JavaScript", percent: "82%" },
-          { name: "React", percent: "88%" },
-          { name: "Redux", percent: "79%" },
-          { name: "Tailwind CSS", percent: "86%" },
-          { name: "Next.js", percent: "85%" },
-          { name: "Typescript", percent: "83%" },
-          { name: "API Integration", percent: "83%" },
-          { name: "Git & GitHub", percent: "85%" },
-          { name: "Responsive Design", percent: "90%" },
+          { name: "HTML", percent: "100%" },
+          { name: "CSS", percent: "100%" },
+          { name: "JavaScript", percent: "100%" },
+          { name: "React", percent: "100%" },
+          { name: "Redux", percent: "100%" },
+          { name: "Tailwind CSS", percent: "100%" },
+          { name: "Next.js", percent: "100%" },
+          { name: "Typescript", percent: "100%" },
+          { name: "API Integration", percent: "100%" },
+          { name: "Git & GitHub", percent: "100%" },
+          { name: "Responsive Design", percent: "100%" },
         ].map((item) => (
           <div key={item.name} style={{ "--percentWidth": item.percent } as React.CSSProperties}>
             <div className="flex justify-between gap-1 text-gray-100 text-sm">
