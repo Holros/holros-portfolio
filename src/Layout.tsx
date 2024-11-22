@@ -94,7 +94,7 @@ const Layout = () => {
             : "md:ml-[25%] py-5 px-3 max-w-[76rem]"
         }`}
       >
-        <div className="flex flex-col">
+        <div className="flex flex-col h-full">
           {/* header */}
           {location.pathname !== "/" && (
             <div className="flex items-center justify-between w-full gap-2 pb-5 md:hidden">
@@ -116,7 +116,7 @@ const Layout = () => {
             </div>
           )}
           {location.pathname !== "/" && <Heading name={heading} />}
-          <div className={`${location.pathname !== "/" && "mr-[45px]"}`}>
+          <div className={`h-full ${location.pathname !== "/" && "mr-[45px]"}`}>
             <Outlet />
           </div>
         </div>
