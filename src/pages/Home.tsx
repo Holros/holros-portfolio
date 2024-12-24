@@ -15,7 +15,9 @@ const Home = () => {
         style={{ "--themeColor": theme } as React.CSSProperties}
       >
         <div className="basis-[45%] max-h-[50%] md:max-h-none bg-white">
-          <img decoding="async" loading="lazy"
+          <img
+            decoding="async"
+            loading="lazy"
             src={profilePicture}
             alt="profile"
             height={3}
@@ -40,8 +42,9 @@ const Home = () => {
           <p className="font-normal text-[15px]">
             I'm a front-end developer who enjoys creating responsive and
             user-friendly web applications with HTML, CSS, JavaScript, React.js,
-            Redux, Next.js, Typescript and Tailwind CSS. I focus on delivering great web experiences
-            through effective API integration and performance optimization.{" "}
+            Redux, Next.js, Typescript and Tailwind CSS. I focus on delivering
+            great web experiences through effective API integration and
+            performance optimization.{" "}
           </p>
           <div className="flex flex-wrap items-start gap-3">
             <Link
@@ -51,7 +54,7 @@ const Home = () => {
               MORE ABOUT ME
             </Link>
             <a
-              href="https://drive.google.com/file/d/14u7FCHa-llD1_VdRXhGQsrIZr3y8Ryew/view?usp=sharing"
+              href="https://1drv.ms/w/c/69fce2d65dfd647f/EX9k_V3W4vwggGmvAAAAAAABsarp79222SOwBSyb9y2_qw?e=i8Kkzl"
               target="_target"
               rel="noreferrer"
               className="bg-gray-700 text-[var(--themeColor)] hover:text-white px-4 py-4 rounded-full text-sm"
