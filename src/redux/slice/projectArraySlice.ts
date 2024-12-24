@@ -11,11 +11,29 @@ import games from "../../static/img/games.png";
 import calculator from "../../static/img/calculator.png"
 import liizorV2 from "../../static/img/liizor-v2.png"
 import liizorV1 from "../../static/img/liizor-v1.png"
+import deepstudy from "../../static/img/deepstudy.png"
+import liizor from "../../static/img/liizor.png"
 
 const projectArrayOptions = {
   name: "projectArray",
   initialState: {
     value: [
+      {
+        img: deepstudy,
+        tools: ["HTML", "CSS", "JS"],
+        link: "https://deepstudyai.com/",
+        github: null,
+      },{
+        img: medinotation,
+        tools: ["HTML", "CSS", "JS"],
+        link: "https://medinotation.com/",
+        github: null,
+      },{
+        img: liizor,
+        tools: ["Next", "HTML", "JS", "Tailwind CSS"],
+        link: "https://liizor-main.vercel.app/",
+        github: null,
+      },
       {
         img: liizorV2,
         tools: ["Next", "HTML", "JS", "Tailwind CSS"],
@@ -46,12 +64,6 @@ const projectArrayOptions = {
         img: visiting,
         tools: ["React", "HTML", "CSS", "JS"],
         link: "https://visitingmyfriendtravels.co.za/",
-        github: null,
-      },
-      {
-        img: medinotation,
-        tools: ["HTML", "CSS", "JS"],
-        link: "https://medinotation.com/",
         github: null,
       },
       {
