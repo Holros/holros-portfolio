@@ -54,7 +54,7 @@ const Home = () => {
               MORE ABOUT ME
             </Link>
             <a
-              href="https://drive.google.com/file/d/1TcYzQm4ej8KHG4sB8v4GYj0wfnMY8aeS/view?usp=sharing"
+              href="https://drive.google.com/file/d/1ISBZt9R_Asa4cYDk53XpLqg3aR69GtOe/view?usp=sharing"
               target="_target"
               rel="noreferrer"
               className="bg-gray-700 text-[var(--themeColor)] hover:text-white px-4 py-4 rounded-full text-sm"

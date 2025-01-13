@@ -13,12 +13,18 @@ import liizorV2 from "../../static/img/liizor-v2.png"
 import liizorV1 from "../../static/img/liizor-v1.png"
 import deepstudy from "../../static/img/deepstudy.png"
 import liizor from "../../static/img/liizor.png"
+import healthData from "../../static/img/healthData.png"
 
 const projectArrayOptions = {
   name: "projectArray",
   initialState: {
     value: [
       {
+        img: healthData,
+        tools: ["Next", "CSS", "TS"],
+        link: "https://healthdatahub.ai/",
+        github: null,
+      },{
         img: deepstudy,
         tools: ["HTML", "CSS", "JS"],
         link: "https://deepstudyai.com/",
@@ -30,13 +36,13 @@ const projectArrayOptions = {
         github: null,
       },{
         img: liizor,
-        tools: ["Next", "HTML", "JS", "Tailwind CSS"],
+        tools: ["Next", "HTML", "TS", "Tailwind CSS"],
         link: "https://liizor-main.vercel.app/",
         github: null,
       },
       {
         img: liizorV2,
-        tools: ["Next", "HTML", "JS", "Tailwind CSS"],
+        tools: ["Next", "HTML", "TS", "Tailwind CSS"],
         link: "https://liizor-prelaunch-v2.vercel.app/",
       },{
         img: liizorV1,
@@ -49,7 +55,7 @@ const projectArrayOptions = {
         github: "https://github.com/Holros/Next.js-Dashboard-App",
       }, */{
         img: portfolio,
-        tools: ["React", "Redux", "HTML", "JS", "Tailwind CSS"],
+        tools: ["React", "Redux", "HTML", "TS", "Tailwind CSS"],
         link: "https://holros.vercel.app/",
         github: "https://github.com/Holros/holros-portfolio",
       },
@@ -68,14 +74,14 @@ const projectArrayOptions = {
       },
       {
         img: games,
-        tools: ["React", "Redux", "HTML", "JS", "Tailwind CSS"],
+        tools: ["React", "Redux", "HTML", "TS", "Tailwind CSS"],
         link: "https://holros-games.netlify.app/",
         github:
           "https://github.com/Holros/my_wisdom_inc_test---Olamide-s-Games",
       },
       {
         img: webShop,
-        tools: ["React", "HTML", "CSS", "JS"],
+        tools: ["React", "HTML", "CSS", "TS"],
         link: "https://holros-web-shop.netlify.app/",
         github: "https://github.com/Holros/web-shop",
       },
