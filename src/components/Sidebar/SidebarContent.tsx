@@ -11,6 +11,7 @@ import profilePicture from "../../static/img/1717961869505.jpg";
 import { NavLink } from "react-router-dom";
 import { openModal } from "../../redux/slice/modalSlice";
 import { RootState } from "../../redux/store";
+import Image from "../general/Image";
 
 const SidebarContent = () => {
   const dispatch = useDispatch();
@@ -20,12 +21,12 @@ const SidebarContent = () => {
   return (
     <>
       <div className="w-full basis-[28%] min-h-[75px] flex overflow-hidden justify-center items-center">
-        <img decoding="async" loading="lazy"
+        <Image
           src={profilePicture}
           alt="profile"
           height={3}
           width={2}
-          className=" max-w-full min-h-full min-w-full object-cover"
+          className="object-cover max-w-full max-h-full min-w-full min-h-full"
         />
       </div>
       <div
@@ -63,11 +64,11 @@ const SidebarContent = () => {
           </NavLink>
         ))}
         <button
-            onClick={() => dispatch(openModal())}
-            className="text-black relative text-xl hover:text-white font-bold font-[montserrat] after:absolute after:w-[1px] after:h-[1.1rem] after:bg-black after:top-[100%] after:left-[50%]"
-          >
-            Change Theme
-          </button>
+          onClick={() => dispatch(openModal())}
+          className="text-black relative text-xl hover:text-white font-bold font-[montserrat] after:absolute after:w-[1px] after:h-[1.1rem] after:bg-black after:top-[100%] after:left-[50%]"
+        >
+          Change Theme
+        </button>
         •
       </div>
     </>

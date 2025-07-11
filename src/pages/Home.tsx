@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { openModal } from "../redux/slice/modalSlice";
 import profilePicture from "../static/img/1717961869505.jpg";
 import { RootState } from "../redux/store";
+import Image from "../components/general/Image";
 
 const Home = () => {
   const theme = useSelector((state: RootState) => state.theme.value);
@@ -15,9 +16,7 @@ const Home = () => {
         style={{ "--themeColor": theme } as React.CSSProperties}
       >
         <div className="basis-[45%] max-h-[50%] md:max-h-none bg-white">
-          <img
-            decoding="async"
-            loading="lazy"
+          <Image
             src={profilePicture}
             alt="profile"
             height={3}
@@ -26,8 +25,10 @@ const Home = () => {
           />
         </div>
         <div className="basis-[55%] flex justify-center p-5 flex-col gap-5 bg-white">
-          <p className="text-3xl mb-[-8px]">HI THERE!</p>
-          <div className="flex flex-col items-start gap-2">
+          <p className="text-3xl mb-[-8px]" data-aos="zoom-in">
+            HI THERE!
+          </p>
+          <div className="flex flex-col items-start gap-2" data-aos="fade-up">
             <p className="text-6xl">
               {" "}
               I'M{" "}
@@ -39,14 +40,14 @@ const Home = () => {
               FRONTEND DEVELOPER
             </p>
           </div>
-          <p className="font-normal text-[15px]">
+          <p className="font-normal text-[15px]" data-aos="fade-up">
             I'm a front-end developer who enjoys creating responsive and
             user-friendly web applications with HTML, CSS, JavaScript, React.js,
             Redux, Next.js, Typescript and Tailwind CSS. I focus on delivering
             great web experiences through effective API integration and
             performance optimization.{" "}
           </p>
-          <div className="flex flex-wrap items-start gap-3">
+          <div className="flex flex-wrap items-start gap-3" data-aos="fade-up">
             <Link
               to="about"
               className="bg-[var(--themeColor)] text-white hover:text-gray-700 px-4 py-4 rounded-full text-sm"

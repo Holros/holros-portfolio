@@ -8,6 +8,7 @@ import whatsappIcon from "../static/icon/icons8-whatsapp.svg";
 import emailIcon from "../static/icon/icons8-email-100.png";
 import callIcon from "../static/icon/icons8-call-contact.png";
 import { RootState } from "../redux/store";
+import Image from "../components/general/Image";
 
 const Contact = () => {
   const theme = useSelector((state: RootState) => state.theme.value);
@@ -17,7 +18,7 @@ const Contact = () => {
   }, [dispatch]);
   return (
     <div style={{ "--themeColor": theme } as React.CSSProperties}>
-      <p className="font-[montserrat] text-xl mb-5">
+      <p className="font-[montserrat] text-xl mb-5" data-aos="zoom-in">
         Feel free to <span className="font-bold">contact</span> me!
       </p>
       <div className="my-[7vh] grid grid-cols-2 gap-2">
@@ -50,21 +51,22 @@ const Contact = () => {
             rel="noreferrer"
             className="flex gap-2 items-center hover:bg-[var(--themeColor)] py-2 hover:px-2 hover:text-white group rounded-lg font-bold text-sm"
             key={index}
+            data-aos="fade-up"
           >
             <div className="p-2 border rounded-full border-red group-hover:bg-gray-300">
-              <img decoding="async" loading="lazy"
-                src={type.img}
-                alt={type.text}
-                height={1}
-                width={1}
-                className="w-10 h-auto max-w-full"
-              />
+              <div className="w-10">
+                <Image src={type.img} alt={type.text} height={1} width={1} />
+              </div>
             </div>{" "}
             <p>{type.text}</p>
           </a>
         ))}
       </div>
-      <div className="flex justify-center mt-6 text-2xl font-bold">Thanks!</div>
+      <div
+        className="flex justify-center mt-6 text-2xl font-bold"
+      >
+        Thanks!
+      </div>
     </div>
   );
 };

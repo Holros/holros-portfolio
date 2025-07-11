@@ -12,3 +12,18 @@
 body {
   font-family: montserrat;
 }
+
+a:hover {
+  opacity: 75%;
+}
+
+button {
+  cursor: pointer;
+}
+button:hover {
+  opacity: 85%;
+}
+
+.debug {
+  outline: 1px solid red;
+}

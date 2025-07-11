@@ -1,22 +1,24 @@
 import { useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
 import { Project } from "../../projectTypes";
+import Image from "../general/Image";
 
-const ProjectCard = ({ project }:{project: Project}) => {
+const ProjectCard = ({ project }: { project: Project }) => {
   const theme = useSelector((state: RootState) => state.theme.value);
   return (
     <div
-      className="w-full relative flex items-end hover:outline outline-gray-400 shadow rounded-lg overflow-hidden"
+      className="relative flex items-end w-full overflow-hidden rounded-lg shadow hover:outline outline-gray-400"
+      data-aos="fade-up"
       style={{ "--themeColor": theme } as React.CSSProperties}
     >
-      <img decoding="async" loading="lazy"
+      <Image
         src={project.img}
         height={1}
         width={2}
         alt="project"
-        className="max-w-full h-auto min-h-full w-full rounded-lg object-cover"
+        className="object-cover w-full h-auto max-w-full max-h-full min-h-full rounded-lg"
       />
-      <div className="absolute flex flex-col gap-2 w-full p-2 z-10">
+      <div className="absolute z-10 flex flex-col w-full gap-2 p-2">
         <div className="flex gap-[6px] flex-wrap">
           {project.tools.map((tool) => (
             <span
@@ -27,24 +29,26 @@ const ProjectCard = ({ project }:{project: Project}) => {
             </span>
           ))}
         </div>
-        <div className="flex justify-between gap-2 items-center"><a
-          href={project.link}
-          rel="noreferrer"
-          target="_blank"
-          className="rounded-lg font-bold py-1 px-2 text-sm bg-[var(--themeColor)] hover:text-gray-700 border border-[var(--themeColor)] text-white"
-        >
-          Live Site
-        </a>
-        {project.github && (
+        <div className="flex items-center justify-between gap-2">
           <a
-            href={project.github}
+            href={project.link}
             rel="noreferrer"
             target="_blank"
             className="rounded-lg font-bold py-1 px-2 text-sm bg-[var(--themeColor)] hover:text-gray-700 border border-[var(--themeColor)] text-white"
           >
-            Code
+            Live Site
           </a>
-        )}</div>
+          {project.github && (
+            <a
+              href={project.github}
+              rel="noreferrer"
+              target="_blank"
+              className="rounded-lg font-bold py-1 px-2 text-sm bg-[var(--themeColor)] hover:text-gray-700 border border-[var(--themeColor)] text-white"
+            >
+              Code
+            </a>
+          )}
+        </div>
       </div>
     </div>
   );
