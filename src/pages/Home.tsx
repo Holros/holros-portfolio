@@ -12,7 +12,7 @@ const Home = () => {
     <>
       {/* <Heading name={"HOME"}/> */}
       <div
-        className="flex flex-col font-bold font-[montserrat] h-[100vh]  md:flex-row-reverse md:overflow-hidden overflow-x-auto justify-start "
+        className="flex flex-col font-bold h-[100vh]  md:flex-row-reverse md:overflow-hidden overflow-x-auto justify-start "
         style={{ "--themeColor": theme } as React.CSSProperties}
       >
         <div className="basis-[45%] max-h-[50%] md:max-h-none bg-white">
@@ -25,7 +25,7 @@ const Home = () => {
           />
         </div>
         <div className="basis-[55%] flex justify-center p-5 flex-col gap-5 bg-white">
-          <p className="text-3xl mb-[-8px]" data-aos="zoom-in">
+          <p className="text-3xl mb-[-0.5rem]" data-aos="zoom-in">
             HI THERE!
           </p>
           <div className="flex flex-col items-start gap-2" data-aos="fade-up">
@@ -40,14 +40,14 @@ const Home = () => {
               FRONTEND DEVELOPER
             </p>
           </div>
-          <p className="font-normal text-[15px]" data-aos="fade-up">
+          <p className="font-normal text-[.9375rem]" data-aos="fade-up">
             I'm a front-end developer who enjoys creating responsive and
             user-friendly web applications with HTML, CSS, JavaScript, React.js,
             Redux, Next.js, Typescript and Tailwind CSS. I focus on delivering
             great web experiences through effective API integration and
             performance optimization.{" "}
           </p>
-          <div className="flex flex-wrap items-start gap-3" data-aos="fade-up">
+          <div className="z-10 flex flex-wrap items-start gap-3 bg-white">
             <Link
               to="about"
               className="bg-[var(--themeColor)] text-white hover:text-gray-700 px-4 py-4 rounded-full text-sm"
@@ -62,12 +62,12 @@ const Home = () => {
             >
               VIEW RESUME
             </a>
-            <button
-              className="bg-gray-700 text-[var(--themeColor)] hover:text-white px-4 py-4 rounded-full text-sm"
+            <div
+              className="cursor-pointer bg-gray-700 text-[var(--themeColor)] hover:text-white px-4 py-4 rounded-full text-sm"
               onClick={() => dispatch(openModal())}
             >
               CHANGE THEME
-            </button>
+            </div>
           </div>
         </div>
       </div>

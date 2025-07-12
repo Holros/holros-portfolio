@@ -1,17 +1,16 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
-
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import "tailwindcss";
 
 @font-face {
   font-family: "supernova";
   src: url("/src/static/fonts/2862-font.otf") format("opentype");
 }
 
-body {
-  font-family: montserrat;
+@theme {
+  --font-montserrat: "Montserrat", "sans-serif";
 }
+
+
 
 a:hover {
   opacity: 75%;

@@ -17,7 +17,7 @@ const AboutMe = () => {
 
   return (
     <div style={{ "--themeColor": theme } as React.CSSProperties}>
-      <p className="font-[montserrat] text-2xl mb-5" data-aos="zoom-in">
+      <p className="text-2xl mb-5" data-aos="zoom-in">
         I'm <span className="font-bold">Ajayi Olamide,</span> Frontend Developer
       </p>
       <p data-aos="fade-up">
@@ -31,7 +31,7 @@ const AboutMe = () => {
         and deliver high-quality web experiences.
       </p>
       <p
-        className="font-[montserrat] text-xl mt-5 mb-2 font-bold"
+        className="text-xl mt-5 mb-2 font-bold"
         data-aos="fade-up"
       >
         My Skills
@@ -71,7 +71,7 @@ const AboutMe = () => {
         ))}
       </div>
       <p
-        className="font-[montserrat] text-xl mt-5 mb-2 font-bold"
+        className="text-xl mt-5 mb-2 font-bold"
         data-aos="fade-up"
       >
         Testimonials

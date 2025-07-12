@@ -25,12 +25,12 @@ const Layout = () => {
   const linksArray = useSelector((state: RootState) => state.links.value);
   const heading = useSelector((state: RootState) => state.heading.value);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const menuRef = useRef(null);
+  const menuRef = useRef<HTMLImageElement>(null);
   const dispatch = useDispatch();
   const location = useLocation();
 
   return (
-    <div className="flex bg-gray-200">
+    <div className="flex bg-gray-200 font-montserrat">
       <Modal heading={"Change Theme"}>
         <p className={`text-lg font-bold pt-2 pb-4`} style={{ color: theme }}>
           Choose the color that best suits your style
@@ -51,11 +51,11 @@ const Layout = () => {
             { name: "Orange", color: "#FF5722", func: setToOrange },
             { name: "Teal", color: "#009688", func: setToTeal },
           ].map((item) => (
-            <button
+            <div
               key={item.name}
               onClick={() => dispatch(item.func())}
               style={{ "--themeColor": theme } as React.CSSProperties}
-              className={`text-black group font-bold font-[montserrat] flex items-center gap-2 p-1 w-full hover:bg-[var(--themeColor)] hover:text-white rounded`}
+              className={`text-black group font-bold  flex items-center gap-2 p-1 w-full hover:bg-[var(--themeColor)] hover:text-white rounded`}
             >
               <span
                 className="w-6 h-6 border border-white rounded-full"
@@ -76,7 +76,7 @@ const Layout = () => {
                   style={{ backgroundColor: theme }}
                 />
               )}
-            </button>
+            </div>
           ))}
         </div>
       </Modal>
@@ -97,7 +97,7 @@ const Layout = () => {
           {location.pathname !== "/" && (
             <div className="flex items-center justify-between w-full gap-2 pb-5 md:hidden">
               <h1
-                className="p-3 text-white font-bold font-[montserrat] text-3xl rounded-lg"
+                className="p-3 text-white font-bold text-3xl rounded-lg"
                 style={{ backgroundColor: theme }}
               >
                 OLAMIDE

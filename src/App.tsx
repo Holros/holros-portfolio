@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { lazy, Suspense } from "react";
+import { JSX, lazy, Suspense } from "react";
 import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
 import Layout from "./Layout";

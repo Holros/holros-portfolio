@@ -18,7 +18,7 @@ const Contact = () => {
   }, [dispatch]);
   return (
     <div style={{ "--themeColor": theme } as React.CSSProperties}>
-      <p className="font-[montserrat] text-xl mb-5" data-aos="zoom-in">
+      <p className="text-xl mb-5" data-aos="zoom-in">
         Feel free to <span className="font-bold">contact</span> me!
       </p>
       <div className="my-[7vh] grid grid-cols-2 gap-2">
@@ -53,7 +53,7 @@ const Contact = () => {
             key={index}
             data-aos="fade-up"
           >
-            <div className="p-2 border rounded-full border-red group-hover:bg-gray-300">
+            <div className="p-2 rounded-full group-hover:bg-gray-300">
               <div className="w-10">
                 <Image src={type.img} alt={type.text} height={1} width={1} />
               </div>

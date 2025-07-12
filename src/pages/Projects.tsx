@@ -17,7 +17,7 @@ const Projects = () => {
   }, [dispatch]);
   return (
     <div style={{ "--themeColor": theme } as React.CSSProperties}>
-      <p className="font-[montserrat] text-xl mb-5" data-aos="zoom-in">
+      <p className="text-xl mb-5" data-aos="zoom-in">
         Take a look at some of the <span className="font-bold">projects</span> I
         have worked on
       </p>

@@ -2,12 +2,20 @@ import React, { useEffect, useRef } from "react";
 import SidebarContent from "./SidebarContent";
 import { useLocation } from "react-router-dom";
 
-const Sidebar = ({ isSidebarOpen, setIsSidebarOpen, menuRef }:{ isSidebarOpen: boolean, setIsSidebarOpen: React.Dispatch<React.SetStateAction<boolean>>, menuRef: React.RefObject<HTMLDivElement> }) => {
+const Sidebar = ({
+  isSidebarOpen,
+  setIsSidebarOpen,
+  menuRef,
+}: {
+  isSidebarOpen: boolean;
+  setIsSidebarOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  menuRef: React.RefObject<HTMLImageElement | null>;
+}) => {
   const mobileSideBarRef = useRef<HTMLDivElement | null>(null);
-  const location = useLocation()
+  const location = useLocation();
 
   useEffect(() => {
-    const checkIfClickIsOutside = (e : MouseEvent) => {
+    const checkIfClickIsOutside = (e: MouseEvent) => {
       if (
         mobileSideBarRef &&
         menuRef &&
@@ -24,7 +32,7 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen, menuRef }:{ isSidebarOpen: b
     };
   }, [menuRef, setIsSidebarOpen]);
 
-   return (
+  return (
     <>
       {/* Sidebar for smaller screen*/}
       <div
