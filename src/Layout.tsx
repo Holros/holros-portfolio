@@ -9,8 +9,8 @@ import { useDispatch, useSelector } from "react-redux";
 import Modal from "./components/modal/Modal";
 import { openModal } from "./redux/slice/modalSlice";
 import {
-  setToBlue,
   setToDefault,
+  setToBlue,
   setToGreen,
   setToOrange,
   setToIndigo,
