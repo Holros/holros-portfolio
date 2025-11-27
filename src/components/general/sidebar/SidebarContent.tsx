@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import profilePicture from "../../../static/img/1717961869505.jpg";
+import profilePicture from "/img/1717961869505.jpg";
 import { NavLink } from "react-router-dom";
 import { openModal } from "../../../redux/slice/modalSlice";
 import { RootState } from "../../../redux/store";

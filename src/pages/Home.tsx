@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { openModal } from "../redux/slice/modalSlice";
-import profilePicture from "../static/img/1717961869505.jpg";
+import profilePicture from "/img/1717961869505.jpg";
 import { RootState } from "../redux/store";
 import Image from "../components/general/Image";
 import api from "../api/api";

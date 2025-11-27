@@ -3,14 +3,19 @@ import { JSX, lazy, Suspense } from "react";
 import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
 import Layout from "./Layout";
-import loadingIcon from "./static/icon/icons8-loading.gif";
 import { RootState } from "./redux/store";
 import NotFound from "./pages/NotFound";
+import {
+  ProtectedRoute,
+  UnprotectedRoute,
+} from "components/projects/ProtectedRoutes";
 
 const Home = lazy(() => import("./pages/Home"));
 const AboutMe = lazy(() => import("./pages/AboutMe"));
 const Projects = lazy(() => import("./pages/Projects"));
 const Contact = lazy(() => import("./pages/Contact"));
+const Edit = lazy(() => import("./pages/Edit"));
+const Login = lazy(() => import("./pages/Login"));
 
 const LoadingFallback = () => {
   const theme = useSelector((state: RootState) => state.theme.value);
@@ -27,7 +32,7 @@ const LoadingFallback = () => {
         animate={{ rotate: [0, 180, 360, 0], x: [0, 20, 0, -20, 0] }}
         transition={{ repeat: Infinity, duration: 3, ease: "linear" }}
         className="mb-[79px] h-auto w-[50px] border-2 border-[var(--themeColor)] rounded-[10px]"
-        src={loadingIcon}
+        src={"/icon/icons8-loading.gif"}
         height={1}
         width={1}
         alt="loading"
@@ -68,6 +73,16 @@ const router = createBrowserRouter([
       {
         path: "contact",
         element: <SuspenseRoute element={Contact} />,
+      },
+      {
+        element: <ProtectedRoute />,
+        children: [{ path: "edit", element: <SuspenseRoute element={Edit} /> }],
+      },
+      {
+        element: <UnprotectedRoute />,
+        children: [
+          { path: "login", element: <SuspenseRoute element={Login} /> },
+        ],
       },
       {
         path: "*",

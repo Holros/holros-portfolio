@@ -1,9 +1,9 @@
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 import Sidebar from "./components/general/sidebar/Sidebar";
-import burgerIcon from "./static/icon/icons8-menu-black.png";
-import cancelIcon from "./static/icon/icons8-cancel-black.png";
-import changeIcon from "./static/icon/icons8-change-100.png";
-import checkmarkIcon from "./static/icon/icons8-checkmark-90.png";
+import burgerIcon from "/icon/icons8-menu-black.png";
+import cancelIcon from "/icon/icons8-cancel-black.png";
+import changeIcon from "/icon/icons8-change-100.png";
+import checkmarkIcon from "/icon/icons8-checkmark-90.png";
 import React, { useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Modal from "./components/general/Modal";

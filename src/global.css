@@ -3,7 +3,7 @@
 
 @font-face {
   font-family: "supernova";
-  src: url("/src/static/fonts/2862-font.otf") format("opentype");
+  src: url("/fonts/2862-font.otf") format("opentype");
 }
 
 @theme {

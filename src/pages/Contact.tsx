@@ -2,11 +2,11 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { setHeading } from "../redux/slice/headingSlice";
 import { useSelector } from "react-redux";
-import githubIcon from "../static/icon/icons8-github.svg";
-import linkedInIcon from "../static/icon/icons8-linkedin.svg";
-import whatsappIcon from "../static/icon/icons8-whatsapp.svg";
-import emailIcon from "../static/icon/icons8-email-100.png";
-import callIcon from "../static/icon/icons8-call-contact.png";
+import githubIcon from "/icon/icons8-github.svg";
+import linkedInIcon from "/icon/icons8-linkedin.svg";
+import whatsappIcon from "/icon/icons8-whatsapp.svg";
+import emailIcon from "/icon/icons8-email-100.png";
+import callIcon from "/icon/icons8-call-contact.png";
 import { RootState } from "../redux/store";
 import Image from "../components/general/Image";
 

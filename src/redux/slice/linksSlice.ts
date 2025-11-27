@@ -1,12 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
-import homeIcon from "../../static/icon/icons8-home-150.png";
-import altHomeIcon from "../../static/icon/icons8-home-100.png";
-import aboutIcon from "../../static/icon/icons8-customer-100.png";
-import altAboutIcon from "../../static/icon/icons8-customer-100 (1).png";
-import projectIcon from "../../static/icon/icons8-desktop-100.png";
-import altProjectIcon from "../../static/icon/icons8-desktop-100 (1).png";
-import contactIcon from "../../static/icon/icons8-call-100.png";
-import altContactIcon from "../../static/icon/icons8-call-100 (1).png";
+import homeIcon from "/icon/icons8-home-150.png";
+import altHomeIcon from "/icon/icons8-home-100.png";
+import aboutIcon from "/icon/icons8-customer-100.png";
+import altAboutIcon from "/icon/icons8-customer-100 (1).png";
+import projectIcon from "/icon/icons8-desktop-100.png";
+import altProjectIcon from "/icon/icons8-desktop-100 (1).png";
+import contactIcon from "/icon/icons8-call-100.png";
+import altContactIcon from "/icon/icons8-call-100 (1).png";
 
 const linksOptions = {
   name: "links",
@@ -29,8 +29,8 @@ const linksOptions = {
       {
         name: "Edit",
         to: "/edit",
-        img: contactIcon,
-        altImg: altContactIcon,
+        img: "/icon/editIcon.png",
+        altImg: "/icon/editIconWhite.png",
       },
     ],
   },

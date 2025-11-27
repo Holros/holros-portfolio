@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { closeModal } from "../../redux/slice/modalSlice";
-import cancelIcon from "../../static/icon/icons8-cancel-black.png";
+import cancelIcon from "/icon/icons8-cancel-black.png";
 import { RootState } from "../../redux/store";
 import React from "react";
 
