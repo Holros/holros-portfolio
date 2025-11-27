@@ -1,17 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
-import profilePicture from "../../static/img/1717961869505.jpg";
-// import {
-//   setToBlue,
-//   setToDefault,
-//   setToGreen,
-//   setToOrange,
-//   setToIndigo,
-//   setToTeal,
-// } from "../redux/slice/themeSlice";
+import profilePicture from "../../../static/img/1717961869505.jpg";
 import { NavLink } from "react-router-dom";
-import { openModal } from "../../redux/slice/modalSlice";
-import { RootState } from "../../redux/store";
-import Image from "../general/Image";
+import { openModal } from "../../../redux/slice/modalSlice";
+import { RootState } from "../../../redux/store";
+import Image from "../Image";
 
 const SidebarContent = () => {
   const dispatch = useDispatch();

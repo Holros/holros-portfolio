@@ -5,8 +5,6 @@ import aboutIcon from "../../static/icon/icons8-customer-100.png";
 import altAboutIcon from "../../static/icon/icons8-customer-100 (1).png";
 import projectIcon from "../../static/icon/icons8-desktop-100.png";
 import altProjectIcon from "../../static/icon/icons8-desktop-100 (1).png";
-// import resumeIcon from "../../static/icon/icons8-resume-100.png";
-// import altResumeIcon from "../../static/icon/icons8-resume-100 (1).png";
 import contactIcon from "../../static/icon/icons8-call-100.png";
 import altContactIcon from "../../static/icon/icons8-call-100 (1).png";
 
@@ -21,17 +19,22 @@ const linksOptions = {
         to: "/projects",
         img: projectIcon,
         altImg: altProjectIcon,
-      } /* 
-      { name: "Resume", to: "/resume", img: resumeIcon, altImg: altResumeIcon }, */,
+      },
       {
         name: "Contact",
         to: "/contact",
         img: contactIcon,
         altImg: altContactIcon,
       },
+      {
+        name: "Edit",
+        to: "/edit",
+        img: contactIcon,
+        altImg: altContactIcon,
+      },
     ],
   },
-  reducers: {}
+  reducers: {},
 };
 
 const linksSlice = createSlice(linksOptions);

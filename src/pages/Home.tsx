@@ -4,13 +4,26 @@ import { openModal } from "../redux/slice/modalSlice";
 import profilePicture from "../static/img/1717961869505.jpg";
 import { RootState } from "../redux/store";
 import Image from "../components/general/Image";
+import api from "../api/api";
+import { useQuery } from "@tanstack/react-query";
+import PulseSkeleton from "../components/general/PulseSkeleton";
 
 const Home = () => {
   const theme = useSelector((state: RootState) => state.theme.value);
   const dispatch = useDispatch();
+
+  const runOperation = async (): Promise<User> => {
+    const response = await api.get("/user");
+    return response.data.data;
+  };
+
+  const { data, isLoading } = useQuery({
+    queryKey: ["/user"],
+    queryFn: runOperation,
+  });
+
   return (
     <>
-      {/* <Heading name={"HOME"}/> */}
       <div
         className="flex flex-col font-bold h-[100vh]  md:flex-row-reverse md:overflow-hidden overflow-x-auto justify-start "
         style={{ "--themeColor": theme } as React.CSSProperties}
@@ -36,38 +49,65 @@ const Home = () => {
                 OLAMIDE
               </span>
             </p>
-            <p className="bg-[var(--themeColor)] py-1 px-2 text-sm">
-              FRONTEND DEVELOPER
-            </p>
+            {isLoading || !data ? (
+              <PulseSkeleton
+                height={28}
+                width={250}
+                borderRadius={0}
+                backgroundColor={theme}
+              />
+            ) : (
+              <p className="bg-[var(--themeColor)] py-1 px-2 text-sm">
+                {data.jobTitle}
+              </p>
+            )}
           </div>
-          <p className="font-normal text-[.9375rem]" data-aos="fade-up">
-            I'm a front-end developer who enjoys creating responsive and
-            user-friendly web applications with HTML, CSS, JavaScript, React.js,
-            Redux, Next.js, Typescript and Tailwind CSS. I focus on delivering
-            great web experiences through effective API integration and
-            performance optimization.{" "}
-          </p>
+
+          <div data-aos="fade-up">
+            {isLoading || !data ? (
+              <div className="flex flex-col gap-1">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <PulseSkeleton key={i} width={"100%"} height={19} />
+                ))}
+              </div>
+            ) : (
+              <p className="font-normal text-[.9375rem]">
+                {data.landingPageAbout}
+              </p>
+            )}
+          </div>
           <div className="z-10 flex flex-wrap items-start gap-3 bg-white">
             <Link
-              to="about"
+              to="/about"
               className="bg-[var(--themeColor)] text-white hover:text-gray-700 px-4 py-4 rounded-full text-sm"
             >
               MORE ABOUT ME
             </Link>
-            <a
-              href="https://drive.google.com/file/d/1ISBZt9R_Asa4cYDk53XpLqg3aR69GtOe/view?usp=sharing"
-              target="_target"
-              rel="noreferrer"
-              className="bg-gray-700 text-[var(--themeColor)] hover:text-white px-4 py-4 rounded-full text-sm"
-            >
-              VIEW RESUME
-            </a>
+            {isLoading || !data ? (
+              <PulseSkeleton borderRadius={99} height={52} width={138.74} />
+            ) : (
+              <a
+                href={data.resumeLink}
+                target="_target"
+                rel="noreferrer"
+                className="bg-gray-700 text-[var(--themeColor)] hover:text-white px-4 py-4 rounded-full text-sm"
+              >
+                VIEW RESUME
+              </a>
+            )}
             <div
               className="cursor-pointer bg-gray-700 text-[var(--themeColor)] hover:text-white px-4 py-4 rounded-full text-sm"
               onClick={() => dispatch(openModal())}
             >
               CHANGE THEME
             </div>
+            <Link
+              to="/edit"
+              className="cursor-pointer bg-gray-700 text-[var(--themeColor)] hover:text-white px-4 py-4 rounded-full text-sm"
+              onClick={() => dispatch(openModal())}
+            >
+              EDIT INFO
+            </Link>
           </div>
         </div>
       </div>

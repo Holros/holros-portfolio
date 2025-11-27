@@ -1,12 +1,12 @@
 import { NavLink, Outlet, useLocation } from "react-router-dom";
-import Sidebar from "./components/sidebar/Sidebar";
+import Sidebar from "./components/general/sidebar/Sidebar";
 import burgerIcon from "./static/icon/icons8-menu-black.png";
 import cancelIcon from "./static/icon/icons8-cancel-black.png";
 import changeIcon from "./static/icon/icons8-change-100.png";
 import checkmarkIcon from "./static/icon/icons8-checkmark-90.png";
 import React, { useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import Modal from "./components/modal/Modal";
+import Modal from "./components/general/Modal";
 import { openModal } from "./redux/slice/modalSlice";
 import {
   setToDefault,
@@ -16,7 +16,7 @@ import {
   setToIndigo,
   setToTeal,
 } from "./redux/slice/themeSlice";
-import Heading from "./components/heading/Heading";
+import Heading from "./components/general/Heading";
 import { RootState } from "./redux/store";
 import Image from "./components/general/Image";
 
