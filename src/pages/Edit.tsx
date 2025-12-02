@@ -16,7 +16,7 @@ export default function EditPage() {
 
   const [activeTab, setActiveTab] = useState<
     "profile" | "skills" | "projects" | "testimonials"
-  >("projects");
+  >("profile");
 
   const tabs = [
     { id: "profile", label: "Profile Info" },
