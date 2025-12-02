@@ -8,6 +8,7 @@
 
 @theme {
   --font-montserrat: "Montserrat", "sans-serif";
+  --breakpoint-xs: 22.5rem; /* Created so swe can target fold and extra small screens */
 }
 
 

@@ -4,6 +4,7 @@ import Image from "../general/Image";
 
 const ProjectCard = ({ project }: { project: Project }) => {
   const theme = useSelector((state: RootState) => state.theme.value);
+
   return (
     <div className="flex flex-col gap-1.5 justify-between">
       <div
@@ -33,55 +34,59 @@ const ProjectCard = ({ project }: { project: Project }) => {
           ))}
         </div>
         {/*  */}
-        <div className="flex items-center justify-between gap-2 border-t border-dashed pt-3">
-          {project.isMobileApp ? (
-            <>
-              {project.androidLink && (
-                <a
-                  href={project.androidLink}
-                  rel="noreferrer"
-                  target="_blank"
-                  className="text-sm font-medium text-gray-600 hover:text-[var(--themeColor)] transition-colors"
-                >
-                  Android →
-                </a>
-              )}
-              {project.iosLink && (
-                <a
-                  href={project.iosLink}
-                  rel="noreferrer"
-                  target="_blank"
-                  className="text-sm font-medium text-gray-600 hover:text-[var(--themeColor)] transition-colors"
-                >
-                  iOS →
-                </a>
-              )}
-            </>
-          ) : (
-            <>
-              {project.liveLink && (
-                <a
-                  href={project.liveLink}
-                  rel="noreferrer"
-                  target="_blank"
-                  className="text-sm font-medium text-gray-600 hover:text-[var(--themeColor)] transition-colors"
-                >
-                  View Project →
-                </a>
-              )}
-              {project.githubLink && (
-                <a
-                  href={project.githubLink}
-                  rel="noreferrer"
-                  target="_blank"
-                  className="text-sm font-medium text-gray-600 hover:text-[var(--themeColor)] transition-colors"
-                >
-                  View Code →
-                </a>
-              )}
-            </>
-          )}
-        </div>
+        {!project.isMobileApp &&
+        !project.githubLink &&
+        !project.liveLink ? null : (
+          <div className="flex items-center justify-between gap-2 border-t border-dashed pt-3">
+            {project.isMobileApp ? (
+              <>
+                {project.androidLink && (
+                  <a
+                    href={project.androidLink}
+                    rel="noreferrer"
+                    target="_blank"
+                    className="text-sm font-medium text-gray-600 hover:text-[var(--themeColor)] transition-colors"
+                  >
+                    Android →
+                  </a>
+                )}
+                {project.iosLink && (
+                  <a
+                    href={project.iosLink}
+                    rel="noreferrer"
+                    target="_blank"
+                    className="text-sm font-medium text-gray-600 hover:text-[var(--themeColor)] transition-colors"
+                  >
+                    iOS →
+                  </a>
+                )}
+              </>
+            ) : (
+              <>
+                {project.liveLink && (
+                  <a
+                    href={project.liveLink}
+                    rel="noreferrer"
+                    target="_blank"
+                    className="text-sm font-medium text-gray-600 hover:text-[var(--themeColor)] transition-colors"
+                  >
+                    View Project →
+                  </a>
+                )}
+                {project.githubLink && (
+                  <a
+                    href={project.githubLink}
+                    rel="noreferrer"
+                    target="_blank"
+                    className="text-sm font-medium text-gray-600 hover:text-[var(--themeColor)] transition-colors"
+                  >
+                    View Code →
+                  </a>
+                )}
+              </>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );

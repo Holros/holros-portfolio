@@ -10,7 +10,7 @@ export default function AOSInit() {
         AOS.init({
             duration: 800,
             once: true,
-            offset: 100,
+            offset: 80,
             // easing: 'ease-in-out',
         })
 

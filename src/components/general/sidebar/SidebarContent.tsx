@@ -31,7 +31,7 @@ const SidebarContent = () => {
             to={item.to}
             key={item.name}
             className={({ isActive }) =>
-              `text-black relative text-xl hover:text-white font-bold after:absolute after:w-[1px] after:h-[1.1rem] after:bg-black after:top-[100%] after:left-[50%] first:before:absolute first:before:w-[1px] first:before:h-[1.1rem] first:before:bg-black first:before:bottom-[100%] first:before:left-[50%] ${
+              `text-black relative text-xl hover:text-white font-bold after:absolute after:w-[1px] after:h-[1.1rem] after:bg-black after:top-[100%] after:left-[50%] first:before:absolute first:before:w-[1px] first:before:h-[1.1rem] first:before:bg-black first:before:bottom-[100%] first:before:left-[50%] text-center ${
                 isActive ? "text-white" : ""
               }`
             }
@@ -41,7 +41,7 @@ const SidebarContent = () => {
         ))}
         <div
           onClick={() => dispatch(openModal())}
-          className="cursor-pointer text-black relative text-xl hover:text-white font-bold after:absolute after:w-[1px] after:h-[1.1rem] after:bg-black after:top-[100%] after:left-[50%]"
+          className="cursor-pointer text-black relative text-xl hover:text-white font-bold after:absolute after:w-[1px] after:h-[1.1rem] after:bg-black after:top-[100%] after:left-[50%] text-center"
         >
           Change Theme
         </div>

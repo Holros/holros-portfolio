@@ -5,8 +5,6 @@ interface Testimonial {
   testimonial: string;
   profilePicture: string;
   userId: string;
-  created_at: string;
-  updated_at: string;
 }
 
 interface Skill {
@@ -14,8 +12,6 @@ interface Skill {
   fullName: string;
   shortName: string;
   userId: string;
-  created_at: string;
-  updated_at: string;
 }
 
 interface User {
@@ -27,8 +23,6 @@ interface User {
   landingPageAbout: string;
   resumeLink: string;
   homePageAbout: string;
-  created_at: string;
-  updated_at: string;
   testimonials: Testimonial[];
   skills: Skill[];
 }
@@ -43,8 +37,6 @@ interface Project {
   iosLink: string | null;
   isMobileApp: boolean;
   userId: string;
-  created_at: string;
-  updated_at: string;
   skills: Skill[];
 }
 
@@ -56,3 +48,18 @@ interface Pagination {
   hasPreviousPage: boolean;
   hasNextPage: boolean;
 }
+
+interface ValidationError<T> {
+  field: keyof T;
+  message: string;
+}
+interface ApiWithFormError<T> {
+  message: string;
+  errors?: ValidationError<T>[] | null;
+}
+
+interface ApiWithError {
+  message: string;
+  errors: null;
+}
+

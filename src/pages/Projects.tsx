@@ -1,6 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from "react";
-import { useDispatch } from "react-redux";
-import { setHeading } from "../redux/slice/headingSlice";
+import { useCallback, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import ProjectCard from "../components/projects/ProjectCard";
 import { RootState } from "../redux/store";
@@ -8,14 +6,10 @@ import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
 import api from "api/api";
 import { Loader2, Rabbit } from "lucide-react";
 import ProjectCardSkeleton from "components/projects/ProjectCardSkeleton";
+import PageWrapper from "components/wrappers/PageWrapper";
 
 const Projects = () => {
   const theme = useSelector((state: RootState) => state.theme.value);
-
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(setHeading("PROJECTS"));
-  }, [dispatch]);
 
   const [skills, setSkills] = useState<string[]>([]);
 
@@ -81,7 +75,8 @@ const Projects = () => {
   );
 
   return (
-    <div style={{ "--themeColor": theme } as React.CSSProperties}>
+    <PageWrapper heading="PROJECTS">
+      <div style={{ "--themeColor": theme } as React.CSSProperties}>
       <p className="text-xl mb-5" data-aos="zoom-in">
         Take a look at some of the <span className="font-bold">projects</span> I
         have worked on
@@ -163,6 +158,7 @@ const Projects = () => {
         )}
       </div>
     </div>
+    </PageWrapper>
   );
 };
 

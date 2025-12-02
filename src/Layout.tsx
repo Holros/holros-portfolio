@@ -16,21 +16,20 @@ import {
   setToIndigo,
   setToTeal,
 } from "./redux/slice/themeSlice";
-import Heading from "./components/general/Heading";
 import { RootState } from "./redux/store";
 import Image from "./components/general/Image";
+import ScrollToTop from "components/general/ScrollToTop";
 
 const Layout = () => {
   const theme = useSelector((state: RootState) => state.theme.value);
   const linksArray = useSelector((state: RootState) => state.links.value);
-  const heading = useSelector((state: RootState) => state.heading.value);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const menuRef = useRef<HTMLImageElement>(null);
   const dispatch = useDispatch();
   const location = useLocation();
 
   return (
-    <div className="flex bg-gray-200 font-montserrat">
+    <div className="flex bg-gray-200 font-montserrat" id="scrollRel">
       <Modal heading={"Change Theme"}>
         <p className={`text-lg font-bold pt-2 pb-4`} style={{ color: theme }}>
           Choose the color that best suits your style
@@ -92,12 +91,12 @@ const Layout = () => {
             : "md:ml-[25%] py-5 px-3 max-w-[76rem]"
         }`}
       >
-        <div className="flex flex-col h-full">
+        <div className="flex flex-col gap-5 h-full">
           {/* header */}
           {location.pathname !== "/" && (
-            <div className="flex items-center justify-between w-full gap-2 pb-5 md:hidden">
+            <div className="flex items-center justify-between w-full gap-2 md:hidden sticky top-0 bg-gray-200 pb-0.5 z-21">
               <h1
-                className="p-3 text-white font-bold text-3xl rounded-lg"
+                className="p-2 text-white font-bold text-2xl rounded-lg"
                 style={{ backgroundColor: theme }}
               >
                 OLAMIDE
@@ -111,14 +110,11 @@ const Layout = () => {
                 width={1}
                 onClick={() => setIsSidebarOpen((value) => !value)}
                 alt="burger nav"
-                className="w-[50px] max-w-full h-auto z-30"
+                className="w-[2.1875rem] max-w-full h-auto z-30"
               />
             </div>
           )}
-          {location.pathname !== "/" && <Heading name={heading} />}
-          <div className={`h-full ${location.pathname !== "/" && "mr-[45px]"}`}>
-            <Outlet />
-          </div>
+          <Outlet />
         </div>
         {/* Utility Widget */}
         <div className="fixed flex p-1 pl-0 items-center top-0 right-2 h-[100vh] z-20">
@@ -162,6 +158,7 @@ const Layout = () => {
           </div>
         </div>
       </div>
+       <ScrollToTop />
     </div>
   );
 };
