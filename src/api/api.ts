@@ -10,9 +10,7 @@ declare module "axios" {
 }
 
 const api = axios.create({
-  // baseURL: "https://holros-portfolio-server.up.railway.app/api",
-  baseURL: "http://localhost:8080/api",
-  // withCredentials: true, //for sending and recieving cookie from backend
+  baseURL: import.meta.env.VITE_API_BASE_URL,
 });
 
 const ACCESS_TOKEN_COOKIE_NAME = "ACCESS_TOKEN_COOKIE_NAME";
