@@ -49,6 +49,7 @@ export default function Testimonials() {
       queryClient.invalidateQueries({ queryKey: ["/user"] });
       close();
       reset();
+      setSelectedFile(null)
       showToast("success", "Testimonial added");
     },
     onError: (err: unknown) => {

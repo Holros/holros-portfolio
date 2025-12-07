@@ -10,7 +10,6 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useDisclosure } from "@mantine/hooks";
 
-
 interface FormData {
   id: string;
   firstName: string;
@@ -55,6 +54,7 @@ export default function IndividualTestimonials({
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["/user"] });
       close();
+      setSelectedFile(null);
       showToast("success", "Testimonial updated");
     },
     onError: (err: unknown) => {
@@ -181,7 +181,7 @@ export default function IndividualTestimonials({
         </div>
         <div className="flex flex-col gap-2">
           <button
-              onClick={open}
+            onClick={open}
             className="text-gray-600 hover:text-gray-800"
             title="Edit"
           >

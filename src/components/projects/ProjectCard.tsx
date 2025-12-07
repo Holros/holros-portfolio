@@ -23,15 +23,18 @@ const ProjectCard = ({ project }: { project: Project }) => {
         />
       </div>
       <div className="flex flex-col justify-between w-full gap-4 px-3 py-4 bg-[#FAFAFA] rounded-lg grow">
-        <div className="flex gap-2 flex-wrap">
-          {project.skills.map((skill) => (
-            <span
-              key={skill.shortName}
-              className="font-medium text-[#344054] text-[.7188rem] py-1 px-3 rounded-full bg-[#EAECF0]"
-            >
-              {skill.fullName}
-            </span>
-          ))}
+        <div className="flex flex-col gap-4">
+          <h2 className="font-bold text-gray-800">{project.projectName}</h2>
+          <div className="flex gap-2 flex-wrap">
+            {project.skills.map((skill) => (
+              <span
+                key={skill.shortName}
+                className="font-medium text-[#344054] text-[.7188rem] py-1 px-3 rounded-full bg-[#EAECF0]"
+              >
+                {skill.fullName}
+              </span>
+            ))}
+          </div>
         </div>
         {/*  */}
         {!project.isMobileApp &&
