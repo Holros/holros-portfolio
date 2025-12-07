@@ -88,13 +88,13 @@ const Layout = () => {
         className={`relative w-full mx-auto min-h-[100vh] ${
           location.pathname === "/"
             ? "md:ml-auto"
-            : "md:ml-[25%] py-5 px-3 max-w-[76rem]"
+            : "md:ml-[25%] py-4 px-3 max-w-[76rem]"
         }`}
       >
-        <div className="flex flex-col gap-5 h-full">
+        <div className="flex flex-col gap-4 h-full">
           {/* header */}
           {location.pathname !== "/" && (
-            <div className="flex items-center justify-between w-full gap-2 md:hidden sticky top-0 bg-gray-200 pb-0.5 z-21">
+            <div className="flex items-center justify-between w-full gap-2 md:hidden sticky top-0 bg-gray-200 pt-1 pb-1.5 z-21">
               <h1
                 className="p-2 text-white font-bold text-2xl rounded-lg"
                 style={{ backgroundColor: theme }}

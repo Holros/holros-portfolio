@@ -41,7 +41,7 @@ const Home = () => {
           <p className="text-3xl mb-[-0.5rem]" data-aos="zoom-in">
             HI THERE!
           </p>
-          <div className="flex flex-col items-start gap-2" data-aos="fade-up">
+          <div className="flex flex-col items-start gap-2" data-aos="zoom-in">
             <p className="text-5xl xs:text-6xl">
               {" "}
               I'M{" "}
@@ -63,7 +63,7 @@ const Home = () => {
             )}
           </div>
 
-          <div data-aos="fade-up">
+          <div>
             {isLoading || !data ? (
               <div className="flex flex-col gap-1">
                 {Array.from({ length: 5 }).map((_, i) => (

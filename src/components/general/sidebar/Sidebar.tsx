@@ -37,7 +37,7 @@ const Sidebar = ({
       {/* Sidebar for smaller screen*/}
       <div
         ref={mobileSideBarRef}
-        className={`fixed flex md:hidden h-full basis-[25%] w-[43%] flex-col overflow-y-auto overflow-x-hidden z-30 transition-transform duration-500 ease-in-out ${
+        className={`fixed flex md:hidden h-full basis-[25%] w-[55%] flex-col overflow-y-auto overflow-x-hidden z-30 transition-transform duration-500 ease-in-out ${
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
