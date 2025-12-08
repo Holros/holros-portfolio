@@ -25,7 +25,7 @@ const Home = () => {
   return (
     <>
       <div
-        className="flex flex-col font-bold h-dvh md:flex-row-reverse md:overflow-hidden justify-start bg-white border border-[green]"
+        className="flex flex-col font-bold h-screen md:flex-row-reverse md:overflow-hidden justify-start bg-white debug"
         style={{ "--themeColor": theme } as React.CSSProperties}
       >
         <div className="basis-[45%] max-h-[50%] md:max-h-none bg-white">
