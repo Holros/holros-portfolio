@@ -32,7 +32,8 @@ const Layout = () => {
     <div
       className={`${
         location.pathname !== "/" ? "bg-gray-200" : "bg-white"
-      } flex font-montserrat" id="scrollRel`}
+      } flex font-montserrat`}
+      id="scrollRel"
     >
       <Modal heading={"Change Theme"}>
         <p className={`text-lg font-bold pt-2 pb-4`} style={{ color: theme }}>
