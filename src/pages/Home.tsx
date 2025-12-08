@@ -25,7 +25,7 @@ const Home = () => {
   return (
     <>
       <div
-        className="flex flex-col font-bold h-[100vh]  md:flex-row-reverse md:overflow-hidden overflow-x-auto justify-start bg-white"
+        className="flex flex-col font-bold h-[100vh] md:flex-row-reverse md:overflow-hidden justify-start bg-white"
         style={{ "--themeColor": theme } as React.CSSProperties}
       >
         <div className="basis-[45%] max-h-[50%] md:max-h-none bg-white">
@@ -83,12 +83,12 @@ const Home = () => {
             >
               MORE ABOUT ME
             </Link>
-            <Link
+            {/* <Link
               to="/edit"
               className="cursor-pointer bg-gray-700 text-[var(--themeColor)] hover:text-white px-4 py-4 rounded-full text-sm"
             >
               EDIT INFO
-            </Link>
+            </Link> */}
             {isLoading || !data ? (
               <PulseSkeleton borderRadius={99} height={52} width={138.74} />
             ) : (

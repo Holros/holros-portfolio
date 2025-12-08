@@ -26,12 +26,12 @@ const linksOptions = {
         img: contactIcon,
         altImg: altContactIcon,
       },
-      {
-        name: "Edit",
-        to: "/edit",
-        img: "/icon/editIcon.png",
-        altImg: "/icon/editIconWhite.png",
-      },
+      // {
+      //   name: "Edit",
+      //   to: "/edit",
+      //   img: "/icon/editIcon.png",
+      //   altImg: "/icon/editIconWhite.png",
+      // },
     ],
   },
   reducers: {},
