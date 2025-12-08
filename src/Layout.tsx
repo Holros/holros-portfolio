@@ -29,7 +29,11 @@ const Layout = () => {
   const location = useLocation();
 
   return (
-    <div className="flex bg-gray-200 font-montserrat" id="scrollRel">
+    <div
+      className={`${
+        location.pathname !== "/" ? "bg-gray-200" : "bg-white"
+      } flex font-montserrat" id="scrollRel`}
+    >
       <Modal heading={"Change Theme"}>
         <p className={`text-lg font-bold pt-2 pb-4`} style={{ color: theme }}>
           Choose the color that best suits your style
@@ -158,7 +162,7 @@ const Layout = () => {
           </div>
         </div>
       </div>
-       <ScrollToTop />
+      <ScrollToTop />
     </div>
   );
 };
